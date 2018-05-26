@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="converter_cropped" translatesAutoresizingMaskIntoConstraints="NO" id="ivy-Yh-U6Z">
+                                <rect key="frame" x="125.66666666666669" y="44" width="124" height="124"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Pe-Yl-Ixa">
+                                <rect key="frame" x="98.666666666666686" y="193" width="177" height="37"/>
+                                <segments>
+                                    <segment title="CAD to USD"/>
+                                    <segment title="USD to CAD"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="AZ7-ml-4Qf"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plH-Hu-DJR">
+                                <rect key="frame" x="16" y="263" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-OP-gXT">
+                                <rect key="frame" x="59" y="313" width="70" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="4H3-15-Zf4"/>
+                                    <constraint firstAttribute="width" constant="70" id="hH7-f4-VUm"/>
+                                </constraints>
+                                <state key="normal" title="Reset" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ja-tZ-F7v"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display only" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-Ic-ZIo">
+                                <rect key="frame" x="59" y="384" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1F-Cc-FtE">
+                                <rect key="frame" x="16" y="389" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EH-gr-XyI">
+                                <rect key="frame" x="289" y="313" width="70" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Uiu-SY-XQk"/>
+                                    <constraint firstAttribute="height" constant="38" id="WKc-YL-cDf"/>
+                                </constraints>
+                                <state key="normal" title="Convert" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="convertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Rn-cZ-aX2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jao-fS-Pao">
+                                <rect key="frame" x="59" y="258" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34796708822250366" green="0.37984341382980347" blue="0.41732174158096313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="5Pe-Yl-Ixa" firstAttribute="top" secondItem="ivy-Yh-U6Z" secondAttribute="bottom" constant="25" id="2RS-Ow-g9g"/>
+                            <constraint firstItem="plH-Hu-DJR" firstAttribute="centerY" secondItem="Jao-fS-Pao" secondAttribute="centerY" id="790-CA-CkK"/>
+                            <constraint firstItem="M1F-Cc-FtE" firstAttribute="centerY" secondItem="QAM-Ic-ZIo" secondAttribute="centerY" id="BPy-Jc-9MS"/>
+                            <constraint firstItem="5Pe-Yl-Ixa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BkB-I1-tKr"/>
+                            <constraint firstItem="Jao-fS-Pao" firstAttribute="leading" secondItem="hGQ-OP-gXT" secondAttribute="leading" id="E7b-mm-6ra"/>
+                            <constraint firstItem="hGQ-OP-gXT" firstAttribute="baseline" secondItem="5EH-gr-XyI" secondAttribute="baseline" id="GjC-14-heR"/>
+                            <constraint firstItem="5EH-gr-XyI" firstAttribute="trailing" secondItem="QAM-Ic-ZIo" secondAttribute="trailing" id="LUz-1q-S8B"/>
+                            <constraint firstItem="plH-Hu-DJR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="219" id="M4a-sM-fa2"/>
+                            <constraint firstItem="ivy-Yh-U6Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OiQ-uX-TG3"/>
+                            <constraint firstItem="ivy-Yh-U6Z" firstAttribute="centerX" secondItem="5Pe-Yl-Ixa" secondAttribute="centerX" id="P8a-SY-r6H"/>
+                            <constraint firstItem="plH-Hu-DJR" firstAttribute="leading" secondItem="M1F-Cc-FtE" secondAttribute="leading" id="RCw-LS-T4N"/>
+                            <constraint firstItem="hGQ-OP-gXT" firstAttribute="top" secondItem="Jao-fS-Pao" secondAttribute="bottom" constant="25" id="S9b-qO-99O"/>
+                            <constraint firstItem="ivy-Yh-U6Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V37-61-b9k"/>
+                            <constraint firstItem="Jao-fS-Pao" firstAttribute="leading" secondItem="plH-Hu-DJR" secondAttribute="trailing" constant="8" symbolic="YES" id="a3h-kK-g86"/>
+                            <constraint firstItem="hGQ-OP-gXT" firstAttribute="leading" secondItem="QAM-Ic-ZIo" secondAttribute="leading" id="bma-4R-4ke"/>
+                            <constraint firstItem="Jao-fS-Pao" firstAttribute="top" secondItem="5Pe-Yl-Ixa" secondAttribute="bottom" constant="29" id="cAK-h6-dJV"/>
+                            <constraint firstItem="plH-Hu-DJR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lA3-qN-FIa"/>
+                            <constraint firstItem="Jao-fS-Pao" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pcD-Lv-9g8"/>
+                            <constraint firstItem="QAM-Ic-ZIo" firstAttribute="top" secondItem="hGQ-OP-gXT" secondAttribute="bottom" constant="33" id="rJh-Vf-kCC"/>
+                            <constraint firstItem="Jao-fS-Pao" firstAttribute="trailing" secondItem="5EH-gr-XyI" secondAttribute="trailing" id="ycc-LR-ZKm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oQC-gf-khB" appends="YES" id="Ynt-mt-p0h"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="botLabel" destination="M1F-Cc-FtE" id="gwP-Z6-RLe"/>
+                        <outlet property="bottomTextField" destination="QAM-Ic-ZIo" id="t4i-8O-88a"/>
+                        <outlet property="topLabel" destination="plH-Hu-DJR" id="03h-In-Xxf"/>
+                        <outlet property="topTextField" destination="Jao-fS-Pao" id="D09-cF-tYn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oQC-gf-khB">
+                    <connections>
+                        <action selector="onTapGestureRecognized:" destination="BYZ-38-t0r" id="9QR-qn-Tjd"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.22660098522168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="converter_cropped" width="124" height="124"/>
+        <image name="whiteButton" width="29" height="38"/>
+    </resources>
+</document>
